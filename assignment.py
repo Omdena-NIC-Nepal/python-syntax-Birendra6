@@ -7,9 +7,7 @@ def format_string(name, age):
     Returns:
         str: Formatted string
     """
-    return f"My name is {name} and I am {age} years old"
-name,age=input("enter name and age separated by comma").split(",")   
-print(format_string(name,age))    
+    return f"My name is {name} and I am {age} years old"   
     
 
 def conditional_check(number):
@@ -23,11 +21,10 @@ def conditional_check(number):
     if number>10:
         return f"Greater"
     elif number<10:
-        return f"lesser"
+        return f"Lesser"
     else:
         return f"Equal"
-number=input("Enter a number") 
-print(conditional_check(int(number)))   
+   
 
 def loop_sum(n):
     """
@@ -41,8 +38,7 @@ def loop_sum(n):
     for i in range(1,n+1):
         sum+=i
     return sum
-n=int(input("Enter value of n"))  
-print(loop_sum(n))      
+    
 
 
 def list_operations(numbers):
@@ -57,8 +53,7 @@ def list_operations(numbers):
     max_val=max(numbers)
     min_val=min(numbers)
     return (total_sum,max_val,min_val)
-numbers=[1,2,3,4,8]
-print(list_operations(numbers))
+
 
 def dict_operations(students_dict):
     """
@@ -73,10 +68,7 @@ def dict_operations(students_dict):
         if scores>80:
             high_scorers.append(names)
     return high_scorers
-students_dict={'Birendra':95,"Hari":60,'Sita':86,'Rita':90,"Deepa":50
 
-               }
-print(dict_operations(students_dict))
 
 def set_operations(list1, list2):
     """
@@ -88,9 +80,7 @@ def set_operations(list1, list2):
         set: Common elements
     """
     return set(list1)& set(list2)
-list1=[2,3,4,6,8]
-list2=[2,3,4,9,6]
-print(set_operations(list1,list2))
+
 
 def arithmetic_ops(a, b):
     """
@@ -101,15 +91,12 @@ def arithmetic_ops(a, b):
     Returns:
         dict: Results of arithmetic operations
     """
-    return {'Addition':a+b,
-            "Subtraction":a-b,
-            'Multiplication':a*b,
-            'Division':a/b
+    return {'sum':a+b,
+            "difference":a-b,
+            'product':a*b,
+            'quotient':a/b
 
            }
-a=10
-b=5
-print(arithmetic_ops(a,b))
 
 def logical_ops(x, y):
     """
@@ -121,16 +108,11 @@ def logical_ops(x, y):
         dict: Results of logical operations
     """
     return {
-        "AND": x and y,  
-        "OR": x or y,  
-        "NOT x": not x,  
-        "NOT y": not y,
-        "XOR": x ^ y  
+        "and": x and y,  
+        "or": x or y,  
+        "not_x": not x 
     }
 
-x = True
-y = False
-print(logical_ops(x, y))
 
 def bitwise_ops(a, b):
     """
@@ -142,13 +124,7 @@ def bitwise_ops(a, b):
         dict: Results of bitwise operations
     """
     return {
-        "AND": a and b,  
-        "OR": a or b,  
-        "NOT a": not a,  
-        "NOT b": not b,
-        "XOR": a ^ b  
+        "and": a&b,  
+        "or": a|b,  
+        "xor": a ^ b  
     }
-
-a = 5
-b = 7
-print(bitwise_ops(a, b))
